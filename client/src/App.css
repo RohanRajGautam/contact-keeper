@@ -74,6 +74,10 @@ img {
   color: var(--primary-color);
 }
 
+.text-success {
+  color: var(--success-color);
+}
+
 .text-dark {
   color: var(--dark-color);
 }
