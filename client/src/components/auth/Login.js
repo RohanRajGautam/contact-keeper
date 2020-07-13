@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import AlertContext from "../../context/alert/alertContext";
 import Footer from "../layout/Footer";
 
 const Login = () => {
+  const alertContext = useContext(AlertContext);
+
+  const { setAlert } = alertContext;
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -15,7 +20,11 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("logged in");
+    if (email === "" || password === "") {
+      setAlert("Please fill out the field", "danger");
+    } else {
+      console.log("logged in");
+    }
   };
 
   return (

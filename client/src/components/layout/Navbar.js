@@ -8,7 +8,7 @@ const Navbar = ({ title, icon }) => {
       <h1>
         <i className={icon} />
         {"  "}
-        {title}
+        <Link to='/'>{title}</Link>
       </h1>
       <ul>
         <li>
