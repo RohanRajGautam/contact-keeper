@@ -1,11 +1,26 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import AlertContext from "../../context/alert/alertContext";
+import AuthContext from "../../context/auth/authContext";
 import Footer from "../layout/Footer";
 
-const Login = () => {
+const Login = (props) => {
   const alertContext = useContext(AlertContext);
+  const authContext = useContext(AuthContext);
 
   const { setAlert } = alertContext;
+  const { login, error, clearErrors, isAuthenticated } = authContext;
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      props.history.push("/");
+    }
+
+    if (error === "Invalid Credentials") {
+      setAlert(error, "danger");
+      clearErrors();
+    }
+    // eslint-disable-next-line
+  }, [isAuthenticated, props.history, error]);
 
   const [user, setUser] = useState({
     email: "",
@@ -23,7 +38,10 @@ const Login = () => {
     if (email === "" || password === "") {
       setAlert("Please fill out the field", "danger");
     } else {
-      console.log("logged in");
+      login({
+        email,
+        password,
+      });
     }
   };
 
