@@ -8,7 +8,9 @@ It is built following Traversy Media Course on Udemy called: "React Front to Bac
 Live Project can be found [here](https://rrg-contact-keeper.herokuapp.com/)
 
 ---
-![contactkeeper](https://i.imgur.com/vFc5AXD.png)
+![frontpage](https://i.imgur.com/vFc5AXD.png)
+
+![loginpage](https://i.imgur.com/2La3YZL.png)
 
 ## Usage
 
