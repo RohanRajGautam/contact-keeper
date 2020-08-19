@@ -1,4 +1,4 @@
-# ContactKeeper
+# ContactKeeper :orange_book:
 
 This is a MERN Stack Contacts Manager App.
 On the Back-End it is built using: Node, Express, JWT, Express-Validator, MongoDB and Mongoose.
@@ -6,6 +6,9 @@ Front-End is created using React (Hooks and Context Api).
 It is built following Traversy Media Course on Udemy called: "React Front to Back 2019".
 
 Live Project can be found [here](https://rrg-contact-keeper.herokuapp.com/)
+
+---
+![contactkeeper](https://i.imgur.com/vFc5AXD.png)
 
 ## Usage
 
